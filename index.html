@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponnuru Ajay | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website for Ponnuru Ajay featuring data science, analytics projects, internship experience, and contact details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="nav">
+          <div class="brand">Ponnuru Ajay</div>
+          <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#internship">Internship</a>
+            <a href="#education">Education</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Data Scientist / Data Analyst</p>
+            <div class="hero-stamp">Available for full-time data analyst and data science roles</div>
+            <h1>
+              Turning raw data into clear insights, predictive models, and
+              business-ready decisions.
+            </h1>
+            <p class="lead">
+              I'm Ponnuru Ajay, a data analyst with hands-on experience in
+              Python, SQL, Power BI, and machine learning. I enjoy cleaning
+              data, uncovering patterns, and building dashboards and models
+              that help teams move with confidence.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#contact">Let's work together</a>
+              <a class="button secondary" href="#work">See selected work</a>
+            </div>
+            <div class="hero-mini-grid">
+              <div>
+                <span>Focus</span>
+                <strong>Analytics, machine learning, and reporting</strong>
+              </div>
+              <div>
+                <span>Approach</span>
+                <strong>EDA, feature engineering, and practical insights</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-side reveal delay-1">
+            <figure class="hero-photo-frame">
+              <img
+                class="hero-photo"
+                src="ajay-profile.jpeg"
+                alt="Portrait of Ponnuru Ajay"
+              />
+            </figure>
+
+            <aside class="hero-card">
+              <div class="orbital-ring"></div>
+              <p class="card-label">Current Focus</p>
+              <h2>Building dashboards and predictive models that turn structured data into action.</h2>
+              <div class="hero-card-stack">
+                <div>
+                  <span>Based in</span>
+                  <strong>Nellore, Andhra Pradesh, India</strong>
+                </div>
+                <div>
+                  <span>Open to</span>
+                  <strong>Full-time data analyst and data science roles</strong>
+                </div>
+                <div>
+                  <span>Recent experience</span>
+                  <strong>Data Science Intern at Vcodez</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </header>
+
+      <section class="ticker reveal" aria-label="Highlights">
+        <div class="ticker-track">
+          <span>Data cleaning</span>
+          <span>Exploratory analysis</span>
+          <span>Machine learning</span>
+          <span>Forecasting</span>
+          <span>Dashboard design</span>
+          <span>Business insights</span>
+          <span>Data cleaning</span>
+          <span>Exploratory analysis</span>
+          <span>Machine learning</span>
+          <span>Forecasting</span>
+          <span>Dashboard design</span>
+          <span>Business insights</span>
+        </div>
+      </section>
+
+      <main>
+        <section class="section stats reveal">
+          <div>
+            <p class="stat-number">1 Internship</p>
+            <p class="stat-label">Hands-on data science internship completed at Vcodez in Chennai</p>
+          </div>
+          <div>
+            <p class="stat-number">8 Projects</p>
+            <p class="stat-label">Selected GitHub projects across machine learning, dashboards, and analytics</p>
+          </div>
+          <div>
+            <p class="stat-number">Python + BI</p>
+            <p class="stat-label">Strong focus on Python, SQL, Power BI, visualization, and business insight</p>
+          </div>
+        </section>
+
+        <section id="work" class="section work-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Selected Work</p>
+            <h2>Projects built around analytics, prediction, and decision support.</h2>
+          </div>
+
+          <div class="project-slider-shell reveal">
+            <div class="project-slider-top">
+              <p class="project-slider-label">Featured GitHub Projects</p>
+              <div class="project-slider-actions">
+                <button class="slider-button" id="projects-prev" type="button" aria-label="Previous projects">
+                  Prev
+                </button>
+                <button class="slider-button" id="projects-next" type="button" aria-label="Next projects">
+                  Next
+                </button>
+              </div>
+            </div>
+            <div class="project-slider-window">
+              <div class="project-list" id="project-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section about-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About Me</p>
+            <h2>I like finding patterns inside messy datasets and turning them into useful business insight.</h2>
+          </div>
+
+          <div class="about-copy reveal delay-1">
+            <p>
+              My work combines data cleaning, exploratory analysis, feature
+              engineering, and clear communication. During my internship at
+              Vcodez, I worked on real-time data projects using Python to clean,
+              analyze, and visualize structured datasets.
+            </p>
+            <p>
+              I recently completed my B.Tech in Electronics and Communication
+              Engineering from Madanapalle Institute of Technology and Science,
+              and I am now focused on growing into a full-time analytics or data
+              science role.
+            </p>
+          </div>
+        </section>
+
+        <section class="section skills-section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Core Skills</p>
+            <h2>A mix of analysis, machine learning, BI tooling, and business-focused reporting.</h2>
+          </div>
+
+          <div class="skills-wrap">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>MySQL</span>
+            <span>SQL Server</span>
+            <span>Excel</span>
+            <span>Power BI</span>
+            <span>Tableau</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Scikit-learn</span>
+            <span>Data Cleaning</span>
+            <span>Machine Learning</span>
+            <span>NLP</span>
+            <span>Statistical Analysis</span>
+            <span>Probabilistic Analysis</span>
+            <span>Data Visualization</span>
+            <span>Feature Engineering</span>
+            <span>Dashboard Reporting</span>
+            <span>Business Intelligence</span>
+          </div>
+        </section>
+
+        <section id="internship" class="section about-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Internship</p>
+            <h2>Hands-on experience working on real-time data projects and practical ML workflows.</h2>
+          </div>
+
+          <div class="about-copy reveal delay-1">
+            <p>
+              <strong>Vcodez</strong><br />
+              Data Science Intern, Chennai<br />
+              July 2025 to October 2025
+            </p>
+            <p>
+              Worked on real-time data projects involving data cleaning,
+              analysis, and visualization using Python, while collaborating on
+              machine learning models and insight generation from structured
+              datasets.
+            </p>
+          </div>
+        </section>
+
+        <section id="education" class="section about-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Education</p>
+            <h2>Academic foundation in engineering, analytical thinking, and structured problem solving.</h2>
+          </div>
+
+          <div class="about-copy reveal delay-1">
+            <p>
+              <strong>Madanapalle Institute of Technology and Science</strong><br />
+              B.Tech in Electronics and Communication Engineering<br />
+              2021 to 2025
+            </p>
+            <p>
+              <strong>Narayana Junior College</strong><br />
+              Intermediate<br />
+              2019 to 2021
+            </p>
+            <p>
+              <strong>Ratnam High School</strong><br />
+              SSC / X<br />
+              2018 to 2019
+            </p>
+          </div>
+        </section>
+
+        <section id="certificates" class="section about-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Certificates</p>
+            <h2>Certifications that strengthened my data analytics, BI, and cloud fundamentals.</h2>
+          </div>
+
+          <div class="about-copy reveal delay-1">
+            <p>
+              <strong>Introduction to Data Science</strong><br />
+              Cisco Networking Academy
+            </p>
+            <p>
+              <strong>Data Analytics Basics, AI and ML Fundamentals, Career Pathways in Data Analytics</strong><br />
+              Cisco Networking Academy, November 2025
+            </p>
+            <p>
+              <strong>Deloitte Australia Data Analytics Job Simulation</strong><br />
+              Forage, December 2025
+            </p>
+            <p>
+              <strong>AWS Cloud Practitioner Essentials</strong><br />
+              futureskills Prime, December 2024
+            </p>
+          </div>
+        </section>
+
+        <section id="contact" class="section contact-card reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's turn data into insight, strategy, and stronger decisions.</h2>
+          <p>
+            Reach out at
+            <a href="mailto:ponnuru.ajaykumar@gmail.com">ponnuru.ajaykumar@gmail.com</a>
+            or connect on
+            <a href="https://www.linkedin.com/in/ajay-ponnuru" target="_blank" rel="noreferrer">LinkedIn</a>.
+          </p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/ajay-ponnuru" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+            <a href="https://github.com/Ajay-hb" target="_blank" rel="noreferrer">GitHub Profile</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
