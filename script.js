@@ -17,6 +17,7 @@ const revealObserver = new IntersectionObserver(
 revealItems.forEach((item) => revealObserver.observe(item));
 
 const featuredProjects = [
+  
   {
     name: "Medical Insurance Cost Prediction",
     summary:
