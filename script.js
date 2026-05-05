@@ -34,6 +34,14 @@ const featuredProjects = [
     link: "https://github.com/Ajay-hb/Smart-Adaptive-Focus-Prediction-system",
   },
   {
+  name: "NLP-Based Developer Salary Prediction System",
+  summary:
+    "Built an end-to-end NLP-powered machine learning system that predicts developer salaries using skill-based text data and real-world survey datasets, deployed with an interactive Streamlit app.",
+  stack: "Python / XGBoost / NLP / Streamlit",
+  highlight: "NLP + real-time salary prediction app",
+  link: "https://github.com/Ajay-hb//Stack-Overflow-Salary-Prediction",
+  },
+  {
     name: "Banking Churn Analysis and Modeling",
     summary:
       "Developed an end-to-end churn prediction system with analytics, retention-focused insights, and an interactive app for identifying high-risk customers.",
