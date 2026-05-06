@@ -21,7 +21,7 @@ const featuredProjects = [
   name: "Autonomous Data Scientist AI System",
   summary:
     "Developed an autonomous AI-powered data science platform capable of automating data cleaning, EDA, machine learning, clustering, hyperparameter tuning, and interactive analytics through a premium dashboard.",
-  stack: "Python / Scikit-learn / Streamlit / Plotly / Optuna / Streamlit",
+  stack: "Python / Streamlit / Plotly",
   highlight: "Autonomous AI Data Science Platform",
   link: "https://github.com/Ajay-hb/Autonomous-Data-Scientist-AI-System",
   },
