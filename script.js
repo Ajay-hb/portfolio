@@ -24,7 +24,6 @@ const featuredProjects = [
   stack: "Python / Scikit-learn / Streamlit / Plotly / Optuna / Streamlit",
   highlight: "Autonomous AI Data Science Platform",
   link: "https://github.com/Ajay-hb/Autonomous-Data-Scientist-AI-System",
-  demo: "https://ajay-autonomous-data-scientist-ai-system.streamlit.app",
   },
   
   {
