@@ -18,7 +18,7 @@ revealItems.forEach((item) => revealObserver.observe(item));
 
 const featuredProjects = [
   {
-  name: "AutoDS AI",
+  name: "AutonomousData Scientist AI System",
   summary:
     "Developed an autonomous AI-powered data science platform capable of automating data cleaning, EDA, machine learning, clustering, hyperparameter tuning, and interactive analytics through a premium dashboard.",
   stack: "Python / Scikit-learn / Streamlit / Plotly / Optuna / Streamlit",
