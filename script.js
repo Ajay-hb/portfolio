@@ -17,6 +17,15 @@ const revealObserver = new IntersectionObserver(
 revealItems.forEach((item) => revealObserver.observe(item));
 
 const featuredProjects = [
+  {
+  name: "AutoDS AI",
+  summary:
+    "Developed an autonomous AI-powered data science platform capable of automating data cleaning, EDA, machine learning, clustering, hyperparameter tuning, and interactive analytics through a premium dashboard.",
+  stack: "Python / Scikit-learn / Streamlit / Plotly / Optuna / Streamlit",
+  highlight: "Autonomous AI Data Science Platform",
+  link: "https://github.com/Ajay-hb/Autonomous-Data-Scientist-AI-System",
+  demo: "https://ajay-autonomous-data-scientist-ai-system.streamlit.app",
+  },
   
   {
     name: "Medical Insurance Cost Prediction",
