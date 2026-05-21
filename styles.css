@@ -763,6 +763,13 @@ a {
   .hero-copy h1 {
     font-size: clamp(3rem, 16vw, 4.5rem);
   }
+  .hero-copy {
+    gap: 4px;
+  }
+
+  .hero-stamp {
+    display: none;
+  }
 
   .hero-mini-grid {
     grid-template-columns: 1fr;
