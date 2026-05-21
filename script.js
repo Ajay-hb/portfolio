@@ -99,15 +99,6 @@ const featuredProjects = [
     projectLink: "",
     link: "https://github.com/Ajay-hb/T20-Cricketers-Info",
   },
-  {
-    name: "Command Line Slot Machine Game",
-    summary:
-      "Built a Python command-line game focused on logic flow, user interaction, and simple randomized gameplay mechanics.",
-    stack: "Python / CLI / Game Logic",
-    highlight: "Interactive terminal project",
-    projectLink: "",
-    link: "https://github.com/Ajay-hb/Command-Line-Slot-Machine-Game",
-  },
 ];
 
 const projectList = document.querySelector("#project-list");
