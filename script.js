@@ -31,7 +31,7 @@ const featuredProjects = [
   summary:
     "Built a Deep Learning powered NLP application that analyzes movie reviews and predicts sentiment as Positive or Negative using an LSTM neural network with real-time inference through an interactive Streamlit web interface.",
   stack: "Python / TensorFlow / NLP / LSTM",
-  highlight: "Deep Learning Based Sentiment Analysis System",
+  highlight: "LSTM Sentiment Analyzer",
   projectLink: "https://ajay-hb-imdb-movie-review-sentiment-predictor.streamlit.app/",
   link: "https://github.com/Ajay-hb/IMDB-Movie-Review-Sentiment-Predictor",
   },
