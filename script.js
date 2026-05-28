@@ -26,6 +26,15 @@ const featuredProjects = [
   projectLink: "https://ajay-autonomous-data-scientist-ai-system.streamlit.app/",
   link: "https://github.com/Ajay-hb/Autonomous-Data-Scientist-AI-System",
   },
+  {
+  name: "IMDB Movie Review Sentiment Predictor",
+  summary:
+    "Built a Deep Learning powered NLP application that analyzes movie reviews and predicts sentiment as Positive or Negative using an LSTM neural network with real-time inference through an interactive Streamlit web interface.",
+  stack: "Python / TensorFlow / Streamlit / NLP / LSTM",
+  highlight: "Deep Learning Based Sentiment Analysis System",
+  projectLink: "https://ajay-hb-imdb-movie-review-sentiment-predictor.streamlit.app/",
+  link: "https://github.com/Ajay-hb/IMDB-Movie-Review-Sentiment-Predictor",
+  },
   
   {
     name: "Medical Insurance Cost Prediction",
