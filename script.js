@@ -35,6 +35,15 @@ const featuredProjects = [
   projectLink: "https://ajay-hb-imdb-movie-review-sentiment-predictor.streamlit.app/",
   link: "https://github.com/Ajay-hb/IMDB-Movie-Review-Sentiment-Predictor",
   },
+  {
+  name: "Object Recognition in Images",
+  summary:
+    "Developed a Deep Learning powered computer vision application capable of recognizing and classifying objects from images using CNN architecture with real-time prediction through an interactive Streamlit interface.",
+  stack: "Python / TensorFlow / CNN / Deep Learning",
+  highlight: "CNN Object Recognizer",
+  projectLink: "https://ajay-hb-object-recognition-in-images.streamlit.app/",
+  link: "https://github.com/Ajay-hb/Object-Recognition-in-Images",
+ },
   
   {
     name: "Medical Insurance Cost Prediction",
