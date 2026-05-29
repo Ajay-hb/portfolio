@@ -1,10 +1,127 @@
-const revealItems = document.querySelectorAll(".reveal");
+const staggerGroups = [
+  ".stats > div",
+  ".hero-mini-grid > div",
+  ".hero-card-stack > div",
+  ".about-copy p",
+  ".skills-wrap span",
+  ".contact-links a",
+];
+
+staggerGroups.forEach((selector) => {
+  document.querySelectorAll(selector).forEach((item, index) => {
+    item.classList.add("stagger-item");
+    item.style.setProperty("--stagger", `${index * 80}ms`);
+  });
+});
+
+document.querySelectorAll(".section, .ticker").forEach((section) => {
+  section.classList.add("scroll-scene");
+});
+
+const nav = document.querySelector(".nav");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const glowTargets = [
+  ".button",
+  ".slider-button",
+  ".project-action",
+  ".project-card",
+  ".hero-card",
+  ".featured-project",
+  ".featured-panel",
+  ".stats",
+  ".about-copy",
+  ".skills-wrap span",
+  ".contact-links a",
+  ".hero-mini-grid > div",
+];
+
+function updateFloatingNav() {
+  if (!nav) {
+    return;
+  }
+
+  nav.classList.toggle("is-floating", window.scrollY > 80);
+}
+
+window.addEventListener("scroll", updateFloatingNav, { passive: true });
+updateFloatingNav();
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("menu-open");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("menu-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+    });
+  });
+}
+
+function addGlowTarget(item) {
+  item.classList.add("glow-target");
+  item.addEventListener("pointermove", (event) => {
+    const rect = item.getBoundingClientRect();
+
+    item.style.setProperty("--glow-x", `${event.clientX - rect.left}px`);
+    item.style.setProperty("--glow-y", `${event.clientY - rect.top}px`);
+  });
+}
+
+glowTargets.forEach((selector) => {
+  document.querySelectorAll(selector).forEach((item) => addGlowTarget(item));
+});
+
+function animateNumber(item) {
+  if (item.dataset.animated === "true") {
+    return;
+  }
+
+  const target = Number(item.dataset.count);
+
+  if (Number.isNaN(target)) {
+    return;
+  }
+
+  item.dataset.animated = "true";
+
+  const suffix = item.dataset.suffix || "";
+  const duration = 2400;
+  const start = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(target * eased);
+
+    item.textContent = `${value}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+function observeReveal(item) {
+  revealObserver.observe(item);
+}
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+        entry.target
+          .querySelectorAll("[data-count]")
+          .forEach((item) => animateNumber(item));
         revealObserver.unobserve(entry.target);
       }
     });
@@ -14,7 +131,9 @@ const revealObserver = new IntersectionObserver(
   }
 );
 
-revealItems.forEach((item) => revealObserver.observe(item));
+document
+  .querySelectorAll(".reveal, .scroll-scene")
+  .forEach((item) => observeReveal(item));
 
 const featuredProjects = [
   {
@@ -123,10 +242,54 @@ const projectList = document.querySelector("#project-list");
 const prevButton = document.querySelector("#projects-prev");
 const nextButton = document.querySelector("#projects-next");
 
+const techBadgeMap = [
+  { match: "python", label: "Py", title: "Python" },
+  { match: "streamlit", label: "St", title: "Streamlit" },
+  { match: "power bi", label: "BI", title: "Power BI" },
+  { match: "tableau", label: "Tb", title: "Tableau" },
+  { match: "tensorflow", label: "TF", title: "TensorFlow" },
+  { match: "scikit", label: "SK", title: "Scikit-learn" },
+  { match: "xgboost", label: "XG", title: "XGBoost" },
+  { match: "nlp", label: "NLP", title: "Natural Language Processing" },
+  { match: "cnn", label: "CNN", title: "Convolutional Neural Network" },
+  { match: "deep learning", label: "DL", title: "Deep Learning" },
+  { match: "machine learning", label: "ML", title: "Machine Learning" },
+  { match: "ml", label: "ML", title: "Machine Learning" },
+  { match: "plotly", label: "Pl", title: "Plotly" },
+  { match: "dax", label: "DAX", title: "DAX" },
+  { match: "jupyter", label: "Jp", title: "Jupyter Notebook" },
+  { match: "pandas", label: "Pd", title: "Pandas" },
+];
+
+function getTechBadges(project) {
+  const source = `${project.stack} ${project.summary}`.toLowerCase();
+  const badges = [];
+  const seen = new Set();
+
+  techBadgeMap.forEach((tech) => {
+    if (source.includes(tech.match) && !seen.has(tech.label)) {
+      badges.push(tech);
+      seen.add(tech.label);
+    }
+  });
+
+  return badges.slice(0, 5);
+}
+
 function renderProjectCards() {
   featuredProjects.forEach((project, index) => {
     const card = document.createElement("article");
-    card.className = "project-card reveal visible";
+    card.className = "project-card reveal";
+    card.style.setProperty("--stagger", `${index * 90}ms`);
+    const techBadges = getTechBadges(project)
+      .map(
+        (tech) =>
+          `<span class="tech-badge" title="${tech.title}" aria-label="${tech.title}">${tech.label}</span>`
+      )
+      .join("");
+    const demoButton = project.projectLink
+      ? `<a class="project-action project-demo" href="${project.projectLink}" target="_blank" rel="noreferrer">Live Demo</a>`
+      : `<span class="project-action is-disabled">Demo Soon</span>`;
     const projectIcon = project.projectLink
       ? `<a class="project-icon-link" href="${project.projectLink}" target="_blank" rel="noreferrer" aria-label="Open ${project.name} project link">↗</a>`
       : `<span class="project-icon-link is-disabled" aria-label="Add project link in script.js">↗</span>`;
@@ -134,19 +297,26 @@ function renderProjectCards() {
     card.innerHTML = `
       <div class="project-card-top">
         <p class="project-type">Project ${String(index + 1).padStart(2, "0")}</p>
-        ${projectIcon}
+        <span class="project-status">Case Study</span>
       </div>
       <h3>${project.name}</h3>
+      <div class="project-tech-icons" aria-label="Project technologies">
+        ${techBadges}
+      </div>
       <p>${project.summary}</p>
       <div class="project-meta">
         <span>${project.stack}</span>
         <span>${project.highlight}</span>
       </div>
-      <a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">
-        View this project on GitHub
-      </a>
+      <div class="project-actions">
+        ${demoButton}
+        <a class="project-action project-github" href="${project.link}" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
     `;
     projectList.appendChild(card);
+    card.querySelectorAll(".project-action:not(.is-disabled)").forEach((item) => addGlowTarget(item));
+    addGlowTarget(card);
+    observeReveal(card);
   });
 }
 
