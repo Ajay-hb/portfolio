@@ -23,6 +23,10 @@
       <header class="hero">
         <nav class="nav">
           <div class="brand">Ponnuru Ajay</div>
+          <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+          </button>
           <div class="nav-links">
             <a href="#work">Work</a>
             <a href="#about">About</a>
@@ -119,16 +123,56 @@
       <main>
         <section class="section stats reveal">
           <div>
-            <p class="stat-number">1 Internship</p>
+            <p class="stat-number" data-count="1" data-suffix=" Internship">0 Internship</p>
             <p class="stat-label">Hands-on data science internship completed at Vcodez in Chennai</p>
           </div>
           <div>
-            <p class="stat-number" id="project-count">30 Projects</p>
+            <p class="stat-number" id="project-count" data-count="30" data-suffix=" Projects">0 Projects</p>
             <p class="stat-label">Selected GitHub projects across machine learning, Deep Learning, and analytics</p>
           </div>
           <div>
             <p class="stat-number">Python + BI</p>
             <p class="stat-label">Strong focus on Python, SQL, Power BI, visualization, model building, and business insight</p>
+          </div>
+        </section>
+
+        <section class="section featured-project reveal">
+          <div class="featured-project-copy">
+            <p class="eyebrow">Featured Project</p>
+            <h2>Autonomous Data Scientist AI System</h2>
+            <p>
+              An AI-powered data science platform that automates data cleaning, exploratory analysis,
+              machine learning, clustering, hyperparameter tuning, and interactive analytics through
+              a premium Streamlit dashboard.
+            </p>
+            <div class="featured-tech">
+              <span>Python</span>
+              <span>Streamlit</span>
+              <span>Plotly</span>
+              <span>Machine Learning</span>
+              <span>EDA</span>
+            </div>
+            <div class="featured-actions">
+              <a class="button primary" href="https://ajay-autonomous-data-scientist-ai-system.streamlit.app/" target="_blank" rel="noreferrer">Live Demo</a>
+              <a class="button secondary" href="https://github.com/Ajay-hb/Autonomous-Data-Scientist-AI-System" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <div class="featured-project-visual" aria-hidden="true">
+            <div class="featured-orbit"></div>
+            <div class="featured-panel panel-main">
+              <span>Model Studio</span>
+              <strong>AutoML</strong>
+              <div class="panel-bars">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+            </div>
+            <div class="featured-panel panel-float">
+              <span>Insights</span>
+              <strong>92%</strong>
+            </div>
           </div>
         </section>
 
