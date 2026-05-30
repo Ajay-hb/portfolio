@@ -218,15 +218,7 @@ const featuredProjects = [
     projectLink: "",
     link: "https://github.com/Ajay-hb/PowerBI-Sales-Dashboard",
   },
-  {
-    name: "Admission Chance Prediction ML",
-    summary:
-      "Built a regression project to estimate admission probability from academic profile features using EDA, feature engineering, and multicollinearity handling.",
-    stack: "Python / Pandas / Scikit-learn",
-    highlight: "500 student profiles",
-    projectLink: "",
-    link: "https://github.com/Ajay-hb/admission-chance-prediction-ml",
-  },
+
   {
     name: "T20 Cricketers Info",
     summary:
