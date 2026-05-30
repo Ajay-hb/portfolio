@@ -291,14 +291,12 @@ function renderProjectCards() {
       ? `<a class="project-action project-demo" href="${project.projectLink}" target="_blank" rel="noreferrer">Live Demo</a>`
       : `<span class="project-action is-disabled">Demo Soon</span>`;
     const projectIcon = project.projectLink
-      ? `<a class="project-icon-link" href="${project.projectLink}" target="_blank" rel="noreferrer" aria-label="Open ${project.name} project link">↗</a>`
-      : `<span class="project-icon-link is-disabled" aria-label="Add project link in script.js">↗</span>`;
+      ? `<a class="project-icon-link" href="${project.projectLink}" target="_blank" rel="noreferrer" aria-label="Open ${project.name} project link">â†—</a>`
+      : `<span class="project-icon-link is-disabled" aria-label="Add project link in script.js">â†—</span>`;
 
     card.innerHTML = `
       <div class="project-card-top">
-        <p class="project-type">Project ${String(index + 1).padStart(2, "0")}</p>
-        <span class="project-status">Case Study</span>
-      </div>
+        <p class="project-type">Project ${String(index + 1).padStart(2, "0")}</p>      </div>
       <h3>${project.name}</h3>
       <div class="project-tech-icons" aria-label="Project technologies">
         ${techBadges}
@@ -339,3 +337,4 @@ prevButton.addEventListener("click", () => slideProjects(-1));
 nextButton.addEventListener("click", () => slideProjects(1));
 
 renderProjectCards();
+
