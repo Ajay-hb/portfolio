@@ -210,6 +210,15 @@ const featuredProjects = [
     link: "https://github.com/Ajay-hb/Kaggle-Santander-Customer-Transaction-Prediction",
   },
   {
+    name: "Admission Chance Prediction ML",
+    summary:
+      "Built a regression project to estimate admission probability from academic profile features using EDA, feature engineering, and multicollinearity handling.",
+    stack: "Python / Pandas / Scikit-learn",
+    highlight: "500 student profiles",
+    projectLink: "",
+    link: "https://github.com/Ajay-hb/admission-chance-prediction-ml",
+  },
+  {
     name: "Power BI Sales Dashboard",
     summary:
       "Created an interactive dashboard covering products, countries, shipment patterns, and profit trends to make performance tracking faster and easier.",
