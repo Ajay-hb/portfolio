@@ -149,7 +149,7 @@ const featuredProjects = [
   name: "Automatic Folk Music Composer",
   summary:
     "Engineered a generative AI application that creates traditional folk melodies using a character-level LSTM model trained on the Nottingham Music Database, featuring interactive music notation rendering and real-time audio playback.",
-  stack: "Python / PyTorch / Generative AI / LSTM / Streamlit",
+  stack: "Python / LSTM / Deep Learning ",
   highlight: "Generative AI Music",
   projectLink: "https://ajay-hb-folk-music-generator.streamlit.app/",
   link: "https://github.com/Ajay-hb/Folk-Music-Generator",
