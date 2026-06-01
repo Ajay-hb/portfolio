@@ -146,6 +146,15 @@ const featuredProjects = [
   link: "https://github.com/Ajay-hb/Autonomous-Data-Scientist-AI-System",
   },
   {
+  name: "Automatic Folk Music Composer",
+  summary:
+    "Engineered a generative AI application that creates traditional folk melodies using a character-level LSTM model trained on the Nottingham Music Database, featuring interactive music notation rendering and real-time audio playback.",
+  stack: "Python / PyTorch / Generative AI / LSTM / Streamlit",
+  highlight: "Generative AI Music",
+  projectLink: "https://ajay-hb-folk-music-generator.streamlit.app/",
+  link: "https://github.com/Ajay-hb/Folk-Music-Generator",
+  },
+  {
   name: "IMDB Movie Review Sentiment Predictor",
   summary:
     "Built a Deep Learning powered NLP application that analyzes movie reviews and predicts sentiment as Positive or Negative using an LSTM neural network with real-time inference through an interactive Streamlit web interface.",
