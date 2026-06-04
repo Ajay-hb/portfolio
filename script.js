@@ -158,7 +158,7 @@ const featuredProjects = [
   name: "Multilingual Language Translation System",
   summary:
     "Engineered a Transformer-powered multilingual translation platform using Meta AI's NLLB model, enabling real-time translation across 22 Indian languages and English with speech-to-text, text-to-speech, automatic language detection, and persistent translation history.",
-  stack: "Python / Transformers / Deep Learning",
+  stack: "Transformers / Deep Learning / NLP",
   highlight: "Language Translator",
   projectLink: "https://ajay-hb-multilingual-language-translation-system.streamlit.app/",
   link: "https://github.com/Ajay-hb/Multilingual_Language_Translation_System_Using_Transformers"
