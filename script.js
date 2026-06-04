@@ -155,6 +155,15 @@ const featuredProjects = [
   link: "https://github.com/Ajay-hb/Folk-Music-Generator",
   },
   {
+  name: "Multilingual Language Translation System",
+  summary:
+    "Engineered a Transformer-powered multilingual translation platform using Meta AI's NLLB model, enabling real-time translation across 22 Indian languages and English with speech-to-text, text-to-speech, automatic language detection, and persistent translation history.",
+  stack: "Python / NLLB / Transformers / Deep Learning",
+  highlight: "Language Translator",
+  projectLink: "https://ajay-hb-multilingual-language-translation-system.streamlit.app/",
+  link: "https://github.com/Ajay-hb/Multilingual_Language_Translation_System_Using_Transformers"
+  },
+  {
   name: "IMDB Movie Review Sentiment Predictor",
   summary:
     "Built a Deep Learning powered NLP application that analyzes movie reviews and predicts sentiment as Positive or Negative using an LSTM neural network with real-time inference through an interactive Streamlit web interface.",
