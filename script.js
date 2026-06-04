@@ -149,7 +149,7 @@ const featuredProjects = [
   name: "Automatic Folk Music Composer",
   summary:
     "Engineered a generative AI application that creates traditional folk melodies using a character-level LSTM model trained on the Nottingham Music Database, featuring interactive music notation rendering and real-time audio playback.",
-  stack: "Python / LSTM / Deep Learning ",
+  stack: "Deep Learning / LSTM / RNN",
   highlight: "Generative AI Music",
   projectLink: "https://ajay-hb-folk-music-generator.streamlit.app/",
   link: "https://github.com/Ajay-hb/Folk-Music-Generator",
@@ -281,6 +281,9 @@ const techBadgeMap = [
   { match: "transformer", label: "Tr", title: "Transformer" },
   { match: "tensorflow", label: "TF", title: "Tensorflow" },
   { match: "keras", label: "KR", title: "Keras" },
+  { match: "LSTM", label: "LSTM", title: "Long Short-Term Memory" },
+  { match: "RNN", label: "RNN", title: "Recurrent Neural Network" },
+  
 ];
 
 function getTechBadges(project) {
