@@ -281,8 +281,7 @@ const techBadgeMap = [
   { match: "transformer", label: "Tr", title: "Transformer" },
   { match: "tensorflow", label: "TF", title: "Tensorflow" },
   { match: "keras", label: "KR", title: "Keras" },
-  { match: "LSTM", label: "LSTM", title: "Long Short-Term Memory" },
-  { match: "RNN", label: "RNN", title: "Recurrent Neural Network" },  
+
 ];
 
 function getTechBadges(project) {
