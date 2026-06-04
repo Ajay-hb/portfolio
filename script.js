@@ -278,6 +278,9 @@ const techBadgeMap = [
   { match: "dax", label: "DAX", title: "DAX" },
   { match: "jupyter", label: "Jp", title: "Jupyter Notebook" },
   { match: "pandas", label: "Pd", title: "Pandas" },
+  { match: "transformer", label: "Tr", title: "Transformer" },
+  { match: "tensorflow", label: "TF", title: "Tensorflow" },
+  { match: "keras", label: "KR", title: "Keras" },
 ];
 
 function getTechBadges(project) {
